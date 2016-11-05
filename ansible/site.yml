@@ -1,0 +1,28 @@
+---
+- hosts: webservers
+
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  gather_facts: no
+
+  tasks:
+    - name: Install apache2
+      apt:
+        name: apache2
+        state: present
+      when: action == "install" and action is defined
+   
+    - name: Uninstall apache2
+      apt:
+        name: apache2
+        state: absent
+      when: action == "uninstall" and action is defined
+
+    - name: Show error message if undefined
+      debug: 
+        msg: "Action is not set"
+      when: action is not defined
+
+

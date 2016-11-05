@@ -1,0 +1,13 @@
+controller.local ansible_host=192.168.50.10  
+node0.local ansible_host=192.168.50.20 
+node1.local ansible_host=192.168.50.21 
+node2.local ansible_host=192.168.50.22 
+node3.local ansible_host=192.168.50.23 
+node4.local ansible_host=192.168.50.24 
+node5.local ansible_host=192.168.50.25 
+node6.local ansible_host=192.168.50.26 
+node7.local ansible_host=192.168.50.27 
+node8.local ansible_host=192.168.50.28 
+
+[webservers]
+node[0:8]
