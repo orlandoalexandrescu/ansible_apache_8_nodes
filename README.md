@@ -5,10 +5,18 @@ Using Vagrant, 1 controller with ansible and 8 blank machines are spawned. Using
 
 Follow these steps to run the machines and access the ansible scripts:
 
+
+
 1. Run the following command from the Vagrantfile folder:
 ```sh
 $ vagrant up
 ```
+NOTE: If you receive an error regarding to the "hosts" provider, please fix it by installing those vagrant plugins:
+```sh
+$ vagrant plugin install vagrant-hosts
+$ vagrant plugin install vagrant-vbguest
+```
+
 2. Connect to the controller machine with this command:
 
 ```sh
